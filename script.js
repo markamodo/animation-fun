@@ -65,6 +65,7 @@ anime({
     duration: 30000,
     easing: 'linear',
     direction: 'normal',
+    loop: true
   })
 
   anime({

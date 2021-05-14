@@ -33,15 +33,6 @@ anime({
   loop: true,
   duration: 10000,
 })
-
-// anime({
-//   targets: ['.container .earth'],
-//   rotate: 360,
-//   easing: 'linear',
-//   loop: true,
-//   duration: 10000,
-// })
-
 anime({
   targets: '.container .sun .img',
   easing: 'linear',
@@ -71,13 +62,6 @@ anime({
     loop: true,
   });
 
-  // anime({
-  //   targets: ".container .space-rock",
-  //   translateX: 10000,
-  //   direction: "normal",
-  //   easing: "linear",
-  //   duration: 300000
-  // });
   anime({
     targets: ".container .space-rock",
     translateX: 10000,
@@ -148,21 +132,3 @@ anime({
     },
     top: '20px',
   });
-// anime({
-//   targets: ".container .rotate",
-//   rotate: [0, 360],
-//   duration: 10000,
-//   direction: "normal",
-//   easing: "linear",
-//   loop: true,
-// });
-
-// anime({
-//   targets: '.container div',
-//   rotateZ: anime.stagger([0, 360], { from: 'center', axis: 'y' }),
-//   // delay: anime.stagger(500, {from: 'center'}),
-//   duration: 7000,
-//   easing: 'linear',
-//   direction: 'normal',
-//   loop: true
-// })

@@ -19,7 +19,7 @@ anime({
 anime({
   targets: '.container .sun .img',
   opacity: {
-    value: [1, 0.6],
+    value: [1, 0.3],
     easing: 'linear',
     duration: 5000
   },
@@ -96,6 +96,21 @@ anime({
     },
     top: '20px',
     loop: true
+  });
+
+  anime({
+    targets: ".container .ovni-2",
+    translateX: 950,
+    translateY: -850,
+    direction: "normal",
+    easing: "linear",
+    duration: 3000,
+    delay: 9000,
+    opacity: {
+      value: 1,
+      duration: 500
+    },
+    top: '20px',
   });
 // anime({
 //   targets: ".container .rotate",

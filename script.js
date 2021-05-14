@@ -1,4 +1,29 @@
-
+// var star = document.getElementById('star');
+var i = 0
+while (i<16) {
+  document.querySelector(".star").innerHTML += '<img class="img img-star" id="star-'+i+'" src="star.png" style="width: 120px; height: 120px; position: absolute"></img>'
+  i++;
+}
+anime({
+  targets: star,
+  loop: true,
+  duration: 5000,
+  loopBegin: function() {
+    if (i == 16) {
+      i = 0;
+    }
+    console.log(i);
+    while (i<16) {
+      const left = Math.floor(Math.random() * (1500 - 100) ) + 100;
+      const top = Math.floor(Math.random() * (800 - 100) ) + 100;
+      console.log(`star-${i}`)
+      document.getElementById(`star-${i}`).style.left = `${left}px`;
+      document.getElementById(`star-${i}`).style.top = `${top}px`;
+      i++;
+    }
+  },
+  opacity: [0.5,1, 0.5,1]
+})
 anime({
   targets: ['.container .earth .img'],
   rotate: 360,
@@ -6,6 +31,14 @@ anime({
   loop: true,
   duration: 10000,
 })
+
+// anime({
+//   targets: ['.container .earth'],
+//   rotate: 360,
+//   easing: 'linear',
+//   loop: true,
+//   duration: 10000,
+// })
 
 anime({
   targets: '.container .sun .img',

@@ -1,11 +1,11 @@
-// var star = document.getElementById('star');
+var star = document.getElementById('star');
 var i = 0
 while (i<16) {
-  document.querySelector(".star").innerHTML += '<img class="img img-star" id="star-'+i+'" src="star.png" style="width: 120px; height: 120px; position: absolute"></img>'
+  document.querySelector(".star").innerHTML += '<img class="img img-star" id="star-'+i+'" src="star.png" style="width: 120px; height: 120px; position: absolute; opacity: 0"></img>'
   i++;
 }
 anime({
-  targets: star,
+  targets: '.star .img',
   loop: true,
   duration: 5000,
   loopBegin: function() {
@@ -22,7 +22,9 @@ anime({
       i++;
     }
   },
-  opacity: [0.5,1, 0.5,1]
+  easing: 'linear',
+  opacity: [0, 1, 0],
+
 })
 anime({
   targets: ['.container .earth .img'],
